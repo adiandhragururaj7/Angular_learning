@@ -1,9 +1,158 @@
-.cg{
-    border: 2px dotted black;
-    background-color: blanchedalmond;
-    align-items: center;
-    height: 200px;
-    width: 50%;
-    float: right;
+
+body{
+    margin: 0;
+    padding-top: 0;
+    background-image: linear-gradient(15deg,rgb(25,54,68),grey);
+}
+#f3{
+    color: green;
+}
+.navi{
+
+    background-image: linear-gradient(90deg,coral,turquoise);
+    padding: 0;
+    border: 1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.navi>ul{
     
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+  
+.field{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 500px;
+    padding-top: 60px;
+    border: 1px solid black;
+    grid-gap: 10px;
+    
+}
+
+.field>div{
+    background-color: #e3e3e3;
+    border: 2px solid black;
+}
+.field>div:nth-child(odd){
+ background-color: #2e2f2d;
+}
+
+.box1{
+    
+    grid-column: 1/3;
+}
+.box3{
+    grid-row: 2/4;
+}
+.box4{
+    display: inline-flex;
+    grid-column:2/4;    
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    align-items: center;  
+
+}
+.box4{
+    border: #2e2f2d 2px dotted;
+}
+.can{
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+    background-color: royalblue;
+    animation-name: myAnime;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+    
+}
+
+@keyframes myAnime{
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 25px;
+        border-radius: 50% 50% 0 0;
+    }
+    100%{
+
+       height: 55px;
+       width: 55px;
+       background-color: violet;
+       left: 0px;
+    }
+}
+.box4>textarea{
+    background-color: grey;
+    color: whitesmoke;
+    text-transform: capitalize;
+}
+textarea:hover{
+    background-color: black;
+    color: whitesmoke; 
+}
+
+
+.box>div{
+    /* border-radius: 25px; */
+    border: 2px solid black;
+    
+}
+.box5{
+    grid-column: 2/4;
+    /* background-image: linear-gradient(45deg,rgb(243, 236, 134),#0ff7d849); */
+
+}
+#foot{
+    border: 1px solid black;
+    height: 100px;
+
+    /* background-color: bisque; */
+    background-image: linear-gradient(45deg,#fc4903,#03fc6b);
+    
+}
+.ani{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: #2e2f2d;
+    height: 600px;
+    flex-direction: row;
+    
+}
+.cans{
+    animation-name: myAnime;
+    transition-property: transform, border-radius ;
+    border: 2px solid white;
+    height: 90px;
+    width: 90px;
+    /* border-radius: ; */
+    border: #7777ff 5px solid;
+    /* background-image: linear-gradient(45deg,#243,#e3e3e3);\ */
+    background-color: bisque;
+    animation-duration: 2000ms;
+    transition-duration: 1000ms;
+    animation-timing-function: ease-in;
+    
+    /* animation-iteration-count: infinite; */
+    
+    
+}
+.cans:hover{
+    transform: rotate(45deg);
+    /* border-radius: 25%; */
+
+    
+
+}
+@keyframes myAnime{
+    0%{background-color: aliceblue;}
+
+    100%{background-image: linear-gradient(red,green);}
 }
